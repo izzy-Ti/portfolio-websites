@@ -157,3 +157,27 @@
 .about_button button a:hover{
     color: orange;
 }
+#service{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.services{
+    background: linear-gradient(to bottom right, rgba(255, 166, 0, 0.55) 0%, black 70%);
+    border-radius: 20px;
+    text-align: center;
+    color: white;
+    padding: 30px 50px;
+    display: flex;
+    flex-direction: column;
+    max-width: 450px;
+}
+.services h1, i{
+    font-size: 3rem;
+    background-color: transparent;
+}
+.services h2{
+    font-size: 1.5rem;
+    background-color: transparent;
+}
