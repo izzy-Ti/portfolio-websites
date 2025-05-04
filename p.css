@@ -50,6 +50,13 @@
     align-items: center;
     gap: 150px;
     height: 90vh;
+    @media (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
 }
 .hero_content{
     color: white;
@@ -66,6 +73,9 @@
     padding: 0;
     opacity: 0;
     animation: fadein 1s ease-in forwards;
+    @media (max-width: 768px){
+        font-size: 4rem;
+    }
 }
 @keyframes fadein{
     to{
@@ -98,11 +108,17 @@
 }
 .hero_items{
     background: linear-gradient(to right, black 70%, orange 30%);
+    @media (max-width: 768px){
+        background: transparent;
+    }
 }
 .hero_items img{
     border-radius: 40%;
     margin: 0;
     background-color: transparent;
+    @media (max-width:768px){
+        display: none;
+    }
 }
 #about{
     display: flex;
@@ -110,6 +126,11 @@
     align-items: center;
     gap: 50px;
     height: 100vh;
+    @media (max-width:768px){
+        display: flex;
+        flex-direction: column;
+        margin: 0px 0px 100px 0;
+    }
 }
 .about_content{
     color: white;
@@ -121,6 +142,9 @@
     border-bottom: 10px solid orange;
     border-left: 10px solid orange;
     background-color: transparent;
+    @media (max-width:768px){
+        padding: 200px 200px;
+    }
 }
 .about_content h1{
     text-align: center;
@@ -133,12 +157,20 @@
     color: rgb(165, 165, 165);
     font-weight: lighter;
     padding: 5px 5px;
+    @media (max-width:768px){
+        width: 30rem;
+        text-align: center;
+
+    }
 }
 .about_button{
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 100px;
+    @media (max-width:768px){
+        gap:20px;
+    }
 }
 .about_button button{
     margin: 50px 0;
@@ -157,27 +189,112 @@
 .about_button button a:hover{
     color: orange;
 }
-#service{
+#services{
+    margin: 0px 0px 200px 0px;
+    @media (max-width:768px){
+        margin: 370px 0px;
+    }
+}
+.flex_wraper{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    gap: 0px;
+    justify-content: center;
     align-items: center;
 }
+#services h1:nth-child(1){
+    color: white;
+    font-size: 3.5rem;
+    border-bottom:4px solid orange;
+    width: 15%;
+    transform: translateX(150%);
+}
 .services{
-    background: linear-gradient(to bottom right, rgba(255, 166, 0, 0.55) 0%, black 70%);
+    margin: 20px 10px;
+    background: linear-gradient(to bottom right, rgba(0, 217, 255, 0.55) 0%, rgb(0, 229, 255) 80%);
     border-radius: 20px;
-    text-align: center;
     color: white;
     padding: 30px 50px;
     display: flex;
     flex-direction: column;
     max-width: 450px;
+    font-family: sans-serif;
+    font-weight: lighter;
+}
+.services:nth-child(2){
+    background: linear-gradient(to bottom right, rgba(255, 166, 0, 0.55) 0%, rgb(255, 230, 0) 80%);
+}
+.services:nth-child(3){
+    background: linear-gradient(to bottom right, rgba(55, 255, 0, 0.55) 0%, rgb(0, 255, 21) 80%);
+}
+.services:nth-child(4){
+    background: linear-gradient(to bottom right, rgba(0, 51, 255, 0.55) 0%, rgb(0, 0, 255) 80%);
 }
 .services h1, i{
     font-size: 3rem;
     background-color: transparent;
+    margin: 10px 0;
 }
 .services h2{
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     background-color: transparent;
+    width: 80%;
+}
+#footer{
+    background-color: rgb(69, 69, 69);
+    padding: 5px 75px;
+    margin: 0px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    @media (max-width:768px){
+        display: flex;
+        flex-direction: column;
+        margin: 50px 0px;
+    }
+}
+#footer *{
+    color: rgb(180, 180, 180);
+    background-color: rgb(69, 69, 69);
+}
+.icons{
+    display: flex;
+    font-family: cursive;
+}
+.icons i{
+    font-size: 7rem;
+}
+.icons h1{
+    font-size: 3rem;
+}
+.footer_nav a{
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    margin: 55px 0px;
+}
+.footer_nav a:hover{
+    color: white;
+}
+.get_in{
+    display: flex;
+    flex-direction: column;
+    font-family:sans-serif;
+    font-size: 1rem;
+}
+.get_in p{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.get_in i{
+    font-size: 2rem;
+}
+.social_media{
+    @media (max-width:768px){
+        text-align: center;
+    }
+}
+.social_media a:hover{
+    color: white;
 }
